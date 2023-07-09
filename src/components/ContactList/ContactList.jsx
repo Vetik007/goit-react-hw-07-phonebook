@@ -8,6 +8,7 @@ import {
   selectIsLoading,
 } from 'redux/selectors';
 import { fetchContacts, deleteContact } from 'redux/contactOperations'; // операції
+import Loader from '../Loader/Loader';
 import css from './ContactList.module.css';
 
 const ContactList = () => {
@@ -26,7 +27,7 @@ const ContactList = () => {
 
   return (
     <>
-      {/* {isLoading && <Spinner />} */}
+      {isLoading && <Loader />}
 
       {/* якщо немає контактів і не йде загрузка і не виникла помилка */}
       {!filteredContacts?.length && !error && !isLoading && (
