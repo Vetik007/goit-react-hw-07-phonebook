@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'; // отримуємо д
 import { nanoid } from 'nanoid'; // генерує унікальні id
 import { ToastContainer, toast } from 'react-toastify'; // пакет для повідомлень
 
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contactOperations';
 import { selectContacts } from 'redux/selectors';
 
 import css from './ContactForm.module.css';

@@ -6,7 +6,7 @@ import {
   selectFilteredContacts,
   selectIsLoading,
 } from 'redux/selectors';
-import { fetchContacts, deleteContact } from 'redux/operations'; // операції
+import { fetchContacts, deleteContact } from 'redux/contactOperations'; // операції
 import css from './ContactList.module.css';
 // import { Button, Item, List, Text, Spinner } from './ContactList.styled';
 
@@ -26,15 +26,15 @@ const ContactList = () => {
 
   return (
     <>
-      {isLoading && <Spinner />}
+      {/* {isLoading && <Spinner />} */}
 
       {/* якщо немає контактів і не йде загрузка і не виникла помилка */}
       {!filteredContacts?.length && !error && !isLoading && (
-        <Text>No contacts found.</Text>
+        <p>No contacts found.</p>
       )}
 
       {/* якщо виникла помилка */}
-      {error && <Text>{error}</Text>}
+      {error && <p>{error}</p>}
       <ul className={css.list}>
         {/* Перебираємо масив контактів і рендеримо їх */}
         {filteredContacts.map(({ id, name, phone }) => (

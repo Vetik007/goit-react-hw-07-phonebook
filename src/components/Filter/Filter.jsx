@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'; // доступ до store
 
-import { setFilter } from 'redux/filterSlice';
+import { setContactFilter } from 'redux/filterSlice';
 import { selectFilter } from 'redux/selectors';
 import css from './Filter.module.css';
 // import { Input, Label } from './Filter.styled';
@@ -20,7 +20,7 @@ const Filter = () => {
         type="text"
         id="filter"
         value={filter}
-        onChange={e => dispatch(setFilter(e.currentTarget.value))}
+        onChange={e => dispatch(setContactFilter(e.currentTarget.value))}
       />
     </div>
 
