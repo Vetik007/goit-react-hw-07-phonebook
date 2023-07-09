@@ -50,7 +50,7 @@ const ContactForm = () => {
         </label>
 
         <label className={css.label} htmlFor={nanoid()}>
-          Number
+          Number Phone
           <input
             className={css.input}
             type="tel"
