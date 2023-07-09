@@ -45,6 +45,13 @@
   border: 3px solid;
 }
 
+.tel {
+  size: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+  /* text-align: center; */
+}
+
 /* ======================================*/
 
 .custom {
